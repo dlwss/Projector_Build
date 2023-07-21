@@ -34,3 +34,19 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      # Init ENV
+      - name: Init ENV
+        run: |
+          apt update
+          apt install git
+            # Init ENV
+      # Clone IC-232.8962
+      - name: Clone IC-232.8962
+        run: |
+          git clone --depth 1 --branch 232.8962  https://gitee.com/mirrors/intellij-community.git
+          cd intellij-community
+          git clone --depth 1 --branch 232.8962  git://git.jetbrains.org/idea/android.git
+          echo "IC-232.8962 clone success"
+          ./installers.cmd -Dintellij.build.target.os=current
+          echo "Build Success"
