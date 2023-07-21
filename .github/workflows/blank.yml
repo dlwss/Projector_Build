@@ -41,6 +41,16 @@ jobs:
           sudo apt update
           sudo apt install -y git
             # Init ENV
+
+      # Restore Cache
+      - name: Restore cached Primes
+        id: cache-primes-restore
+        uses: actions/cache/restore@v3
+        with:
+          path: |
+            /home/runner/.m2/repository/
+          key: 232.8962-repository
+
       # Clone IC-232.8962
       - name: Clone IC-232.8962
         run: |
@@ -59,11 +69,11 @@ jobs:
           # A file, directory or wildcard pattern that describes what to upload
           path: /home/runner/work/Projector_Build/Projector_Build/intellij-community/out/idea-ce/artifacts
 
-      # cache maven repository
-      - name: Cache IC-232 .m2 repository
-        id: cache-primes-save
-        uses: actions/cache/save@v3
-        with:
-          path: |
-            /home/runner/.m2/repository/
-          key: 232.8962-repository
+      # cache maven repository Once
+#      - name: Cache IC-232 .m2 repository
+#        id: cache-primes-save
+#        uses: actions/cache/save@v3
+#        with:
+#          path: |
+#            /home/runner/.m2/repository/
+#          key: 232.8962-repository
