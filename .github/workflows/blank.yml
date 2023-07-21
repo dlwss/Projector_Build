@@ -50,3 +50,11 @@ jobs:
           echo "IC-232.8962 clone success"
           ./installers.cmd -Dintellij.build.target.os=current
           echo "Build Success"
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          # Artifact name
+          name: IC-232.8962# optional, default is artifact
+          # A file, directory or wildcard pattern that describes what to upload
+          path: /home/runner/work/Projector_Build/Projector_Build/intellij-community/out/idea-ce/artifacts
