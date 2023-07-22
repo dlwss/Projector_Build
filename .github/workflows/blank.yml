@@ -105,7 +105,7 @@ jobs:
           cd intellij-community
           git clone --depth 1 --branch 232.8962  https://github.com/JetBrains/android.git
           echo "IC-232.8962 clone success"
-          ./installers.cmd -Dintellij.build.target.os=current
+          ./installers.cmd -Dintellij.build.target.os=windows
           echo "Build Success"
 
       - name: Upload Build Artifact
