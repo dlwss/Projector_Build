@@ -70,10 +70,10 @@ jobs:
           path: /home/runner/work/Projector_Build/Projector_Build/intellij-community/out/idea-ce/artifacts
 
       # cache maven repository Once
-#      - name: Cache IC-232 .m2 repository
-#        id: cache-primes-save
-#        uses: actions/cache/save@v3
-#        with:
-#          path: |
-#            /home/runner/.m2/repository/
-#          key: 232.8962-repository
+      - name: Cache IC-232 .m2 repository
+        id: cache-primes-save
+        uses: actions/cache/save@v3
+        with:
+          path: |
+            /home/runner/.m2/repository/
+          key: 232.8962-repository
