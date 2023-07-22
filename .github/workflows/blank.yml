@@ -46,6 +46,8 @@ jobs:
           ls -al
           cd projector-server
           ./gradlew :projector-server-jdk17:distZip
+          echo "查询打包结果"
+          ll projector-server-jdk17
 
 #      - name: Execute Gradle build
 #        run: ./gradlew build
@@ -55,7 +57,7 @@ jobs:
           # Artifact name
           name: ProjectorV1.8.1
           # A file, directory or wildcard pattern that describes what to upload
-          path: /home/runner/work/Projector_Build/Projector_Build/projector-server/projector-server/build/distibution/
+          path: /home/runner/work/Projector_Build/Projector_Build/projector-server/projector-server-jdk17/build/distibution/
 
 
   # This workflow contains a single job called "build"
