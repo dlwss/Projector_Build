@@ -47,7 +47,7 @@ jobs:
           cd projector-server
           ./gradlew :projector-server-jdk17:distZip
           echo "查询打包结果"
-          ll projector-server-jdk17
+          ls -al projector-server-jdk17
 
 #      - name: Execute Gradle build
 #        run: ./gradlew build
