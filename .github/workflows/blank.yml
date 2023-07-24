@@ -105,7 +105,13 @@ jobs:
           cd intellij-community
           git clone --depth 1 --branch 232.8962  https://github.com/JetBrains/android.git
           echo "IC-232.8962 clone success"
-          ./installers.cmd -Dintellij.build.target.os=windows
+
+      # Build IC-232.8962
+      - name: Build IC-232.8962
+        run: |
+          pwd
+          cd intellij-community
+          ./installers.cmd -Dintellij.build.target.os=linux
           echo "Build Success"
 
       - name: Upload Build Artifact
@@ -114,7 +120,7 @@ jobs:
           # Artifact name
           name: IC-232.8962
           # A file, directory or wildcard pattern that describes what to upload
-          path: /home/runner/work/Projector_Build/Projector_Build/intellij-community/out/idea-ce/artifacts
+          path: /home/runner/work/Projector_Build/Projector_Build/intellij-community/out/idea-ce/artifacts/
 
       # cache maven repository Once
       - name: Cache IC-232 .m2 repository
