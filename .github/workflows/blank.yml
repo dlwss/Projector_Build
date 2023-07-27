@@ -98,27 +98,27 @@ jobs:
             /home/runner/.m2/repository/
           key: 232.8962-repository
 
-      # Clone IC-232.8962
-      - name: Clone IC-232.8962
+      # Clone IC-232.8660
+      - name: Clone IC-232.8660
         run: |
           git clone --depth 1 --branch 232.8660  https://github.com/JetBrains/intellij-community.git
           cd intellij-community
           git clone --depth 1 --branch 232.8660  https://github.com/JetBrains/android.git
-          echo "IC-232.8962 clone success"
+          echo "IC-232.8660 clone success"
 
-      # Build IC-232.8962
-      - name: Build IC-232.8962
+      # Build IC-232.8660
+      - name: Build IC-232.8660
         run: |
           pwd
           cd intellij-community
-          ./installers.cmd -Dintellij.build.target.os=all
+          ./installers.cmd -Dintellij.build.target.os=linux
           echo "Build Success"
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v3.1.2
         with:
           # Artifact name
-          name: IC-232.8962
+          name: IC-232.8660
           # A file, directory or wildcard pattern that describes what to upload
           path: /home/runner/work/Projector_Build/Projector_Build/intellij-community/out/idea-ce/artifacts/
 
@@ -129,4 +129,4 @@ jobs:
         with:
           path: |
             /home/runner/.m2/repository/
-          key: 232.8962-repository
+          key: 232.8660-repository
