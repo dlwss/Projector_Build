@@ -98,12 +98,12 @@ jobs:
             /home/runner/.m2/repository/
           key: 232.8962-repository
 
-      # Clone IC-232
+      # Clone IC-232 当前版本 232.8962 目标版本  idea/232.8660.185
       - name: Clone IC-232.8660.185
         run: |
-          git clone --depth 1 --branch idea/232.8660.185  https://github.com/JetBrains/intellij-community.git
+          git clone --depth 1 --branch 232.8962  https://github.com/JetBrains/intellij-community.git
           cd intellij-community
-          git clone --depth 1 --branch idea/232.8660.185  https://github.com/JetBrains/android.git
+          git clone --depth 1 --branch 232.8962  https://github.com/JetBrains/android.git
           echo "IC-232.8660.185 clone success"
 
       # Build IC-232
