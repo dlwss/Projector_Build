@@ -121,7 +121,7 @@ jobs:
         run: |
           pwd
           cd intellij-community
-          ./installers.cmd -Dintellij.build.target.os=linux
+          ./installers.cmd -Dintellij.build.target.os=linux -Dintellij.build.incremental.compilation=true
           echo "Build Success"
 
       - name: Upload Build Artifact
