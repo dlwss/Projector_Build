@@ -121,7 +121,7 @@ jobs:
         run: |
           pwd
           cd intellij-community
-          ./installers.cmd -Dintellij.build.target.os=all
+          ./installers.cmd -Dintellij.build.target.os=linux
           echo "Build Success"
 
       - name: Upload Build Artifact
