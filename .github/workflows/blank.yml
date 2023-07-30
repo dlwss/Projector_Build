@@ -87,17 +87,17 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y git
-          sudo apt-get update -y && \
-               apt-get install -y wget \
-               tar \
-               p7zip-full \
-               libfreetype6 \
-               fontconfig \
-               zip \
-               unzip \
-               libgl1-mesa-glx \
-               squashfs-tools \
-               && rm -rf /var/lib/apt/lists/*
+          sudo apt-get update -y 
+               apt-get install -y wget 
+               apt-get install -y tar 
+               apt-get install -y p7zip-full 
+               apt-get install -y libfreetype6 
+               apt-get install -y fontconfig 
+               apt-get install -y zip 
+               apt-get install -y unzip 
+               apt-get install -y libgl1-mesa-glx 
+               apt-get install -y squashfs-tools
+               rm -rf /var/lib/apt/lists/* 
             # Init ENV
 
       # Restore Cache
