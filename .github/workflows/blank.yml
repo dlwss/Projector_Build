@@ -82,12 +82,11 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      # Init ENV
+      # Init ENV  sudo apt-get update -y
       - name: Init ENV
         run: |
           sudo apt update
           sudo apt install -y git
-#          sudo apt-get update -y
           sudo apt-get install -y wget 
           sudo apt-get install -y tar 
           sudo apt-get install -y p7zip-full 
